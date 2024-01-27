@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nanitas Kangú</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+  body, h1, h5 {font-family: "Raleway", sans-serif}
+  body, html {height: 100%}
+  .bgimg {
+    background-image: url('picture.png');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    display: flex; /* Use flexbox to align children */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Ensure text is centered */
+  }
+
+  /* Black overlay */
+  .bgimg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 0; /* Ensure it's above the background image */
+  }
+
+  .overlay {
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  .image-text-container {
+    z-index: 2;
+    max-width: 100%;
+    display: flex; /* Use flexbox for this container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+  }
+
+  .kangu-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 300px;
+    margin-bottom: 1px; /* Reduced space between the image and the text */
+    display: block; /* Ensure image takes up the full width of its container */
+    margin: 0 auto; 
+  }
+
+  .w3-jumbo {
+    margin: 0; /* Remove default margins */
+  }
+
+  .w3-jumbo p, .app-description {
+    color: pink; /* Pink color for text */
+    margin-top: 0; /* Remove top margin to bring elements closer */
+    display: inline-block; /* Align text blocks properly */
+    text-align: center;
+  }
+
+  .app-description {
+    text-align: center;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+
+    <div class="bgimg w3-display-container w3-text-white">
+        <div class="w3-display-middle image-text-container">
+          <img src="icon.png" alt="Image" class="kangu-image">
+          <div class="w3-jumbo">
+            <p>Kangú</p>
+          </div>
+          <div class="app-description">
+            <p>Una aplicación boliviana para contratar niñeras de confianza, en tu propio horario.</p>
+          </div>
+        </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-pink">política de privacidad</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-pink">contacto</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container overlay">
+    <p class="w3-xlarge">Consíguenos en la Play Store y App Store</p>
+    <p class="w3-large">La Paz, Bolivia</p>
+    <p>Síguenos en <a href="https://www.facebook.com/profile.php?id=61554119506835" target="_blank">Facebook</a></p>
+  </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-pink w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Recopilación de Información</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Recopilamos información necesaria para proveer nuestros servicios, como nombres, edades de los niños, y detalles de contacto.</h5>
+    </div>
+    <div class="w3-container w3-pink">
+      <h1>Uso de la Información</h1>
+    </div>
+    <div class="w3-container">
+      <h5>La información recopilada se utiliza exclusivamente para mejorar nuestros servicios y no se comparte con terceros sin consentimiento.</h5>
+    </div>
+    <div class="w3-container w3-pink">
+      <h1>Acceso y Control</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Los usuarios pueden revisar y modificar su información personal en cualquier momento.</h5>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Contacto</h1>
+    </div>
+    <div class="w3-container">
+      <p>En caso de que no quieras usar la app y necesites una nana, puedes contactarnos aquí</p>
+ <div class="w3-container w3-pink">
+      <h1>Whatsapp</h1>
+    </div>
+    <div class="w3-container">
+      <h5>Puede contactarnos al Whatsapp bajo el número 70595440</h5>
+       <div class="w3-container w3-pink">
+      <h1>Facebook</h1>
+    </div>
+    
+    <div class="w3-container">
+      <h5>Síguenos en <a href="https://www.facebook.com/profile.php?id=61554119506835" target="_blank">Facebook</a></h5>
+    </div>
+    </div>
+           <div class="w3-container w3-pink">
+      <h1>Correo electrónico</h1>
+    </div>
+    
+    <div class="w3-container">
+      <h5>Contáctanos aquí: soporte@nanitaskangu.com</h5>
+    </div>
+    </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
